@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="liquid-canvas"></canvas>
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <button id="prevBtn" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <span class="slide-indicator">1 / 7</span>
+        <button id="nextBtn" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <div class="deck-container">
+
+        <!-- Slide 1: Intro -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content centered">
+
+                <h1 class="main-title">Hichem Bensabeur</h1>
+                <h3 class="role-title"><span class="highlight">AKA Zeydash</span></h3>
+                <div class="line"></div>
+                <p class="subtitle">Étudiant en Développement Web & Graphisme</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Profil -->
+        <section class="slide" id="slide-2">
+            <div class="slide-grid">
+                <div class="slide-image">
+                    <img src="assets/unnamed (1).png" alt="Hichem Illustration">
+                </div>
+                <div class="slide-text">
+                    <h2>À Propos</h2>
+                    <ul class="huge-list">
+                        <li><i class="fa-solid fa-user"></i> <strong>Hichem Bensabeur</strong></li>
+                        <li><i class="fa-solid fa-tag"></i> <strong>Zeydash</strong></li>
+                        <li><i class="fa-solid fa-laptop-code"></i> <strong>Dev Web & Design</strong></li>
+                        <li><i class="fa-solid fa-location-dot"></i> <strong>Montereau-Fault-Yonne</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Compétences -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content centered">
+                <h2>Compétences</h2>
+                <div class="skills-container">
+                    <div class="skill-category spotlight-card">
+                        <h3><i class="fa-solid fa-code" style="color: #ffffff;"></i> Développement Web</h3>
+                        <div class="skill-tags">
+                            <span><i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML</span>
+                            <span><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i> CSS</span>
+                            <span><i class="fa-solid fa-database" style="color: #00758F;"></i> SQL</span>
+                            <span><i class="fa-solid fa-file-code" style="color: #F7DF1E;"></i> JSON</span>
+                            <span><i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JAVASCRIPT</span>
+                            <span><i class="fa-brands fa-php" style="color: #777BB4;"></i> PHP</span>
+                            <span><i class="fa-solid fa-c" style="color: #A8B9CC;"></i> C</span>
+                            <span><i class="fa-brands fa-wordpress" style="color: #21759B;"></i> Wordpress</span>
+                            <span><i class="fa-brands fa-symfony" style="color: #ffffff;"></i> Symfony</span>
+                            <span><i class="fa-brands fa-vuejs" style="color: #4FC08D;"></i> VueJS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category spotlight-card">
+                        <h3><i class="fa-solid fa-pen-nib" style="color: #ffffff;"></i> Design</h3>
+                        <div class="skill-tags">
+                            <span><img src="assets/ps.svg" class="skill-icon-img" alt="PS"> Photoshop</span>
+                            <span><img src="assets/ai.svg" class="skill-icon-img" alt="AI"> Illustrator</span>
+                            <span><i class="fa-solid fa-palette" style="color: #00C4CC;"></i> Canva</span>
+                            <span><i class="fa-brands fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Project 1 -->
+        <section class="slide" id="slide-4">
+            <div class="slide-grid spotlight-card">
+                <div class="slide-showcase" style="background-image: url('assets/sniper_legacy.png')"></div>
+                <div class="slide-text">
+                    <span class="badget">Projet 01</span>
+                    <h2>Sniping Legacy</h2>
+                    <p>Plusieurs éléments graphiques liés à la communication pour Sniper Legacy, des organisateurs de
+                        tournois Black Ops 7.</p>
+                    <div class="tags-row">
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                        <span>Canva</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Project 2 -->
+        <section class="slide" id="slide-5">
+            <a href="https://hichem-br.github.io/MonPortfolio/assets/img/charte_D_Bensabeur_Mohamed-Hichem.pdf"
+                target="_blank" class="slide-link-wrapper">
+                <div class="slide-grid clickable-project spotlight-card">
+                    <div class="slide-showcase" style="background-image: url('assets/project2.webp')"></div>
+                    <div class="slide-text">
+                        <span class="badget">Projet 02</span>
+                        <h2>Club Devers Troyes <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></h2>
+                        <p>Conception d'une identité visuelle complète : logotype, palette, et déclinaisons.</p>
+                        <div class="tags-row">
+                            <span>Branding</span>
+                            <span>Logotype</span>
+                            <span>Design</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Slide 6: Project 3 -->
+        <section class="slide" id="slide-6">
+            <a href="https://mmi23a12.sae202.ovh/agence/" target="_blank" class="slide-link-wrapper">
+                <div class="slide-grid clickable-project spotlight-card">
+                    <div class="slide-showcase" style="background-image: url('assets/project3.webp')"></div>
+                    <div class="slide-text">
+                        <span class="badget">Projet 03</span>
+                        <h2>Kernel Sphere <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></h2>
+                        <p>Création d'interfaces web modernes (UI) et expérience utilisateur (UX) pour marques fictives.
+                        </p>
+                        <div class="tags-row">
+                            <span>Figma</span>
+                            <span>UI/UX</span>
+                            <span>Prototypage</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Slide 7: Experience -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content centered">
+                <h2>Parcours Simplifié</h2>
+                <div class="timeline-h">
+                    <div class="t-item spotlight-card" style="padding: 20px; border-radius: 15px;">
+                        <div class="year">2023 - 2026</div>
+                        <div class="role">BUT Métiers du Multimédia et de l'Internet</div>
+                        <div class="place">Développement Web, Graphisme</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Contact -->
+        <section class="slide" id="slide-8">
+            <div class="slide-content centered">
+                <h2>Me Contacter</h2>
+                <div class="contact-big">
+                    <div class="c-item spotlight-card" style="padding: 30px; border-radius: 20px;">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Hichem.bnbr@gmail.com</span>
+                    </div>
+                    <div class="c-item spotlight-card" style="padding: 30px; border-radius: 20px;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>07 83 11 85 97</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="liquid.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
