@@ -448,7 +448,146 @@ body {
 .small-icon {
     font-size: 0.5em;
     vertical-align: middle;
+
     color: var(--accent);
     margin-left: 10px;
     opacity: 0.7;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+
+    /* Layout Adjustments */
+    .slide-grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 2rem;
+        overflow-y: auto;
+        padding-top: 4rem;
+        /* Space for top breathing room */
+    }
+
+    /* Reverse order for Profile slide so image is on top */
+    #slide-2 .slide-grid {
+        flex-direction: column-reverse;
+    }
+
+    /* Typography Scaling */
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .role-title {
+        font-size: 1.8rem;
+    }
+
+    .pre-title {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .slide-text h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .slide-text p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .huge-list li {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Image Adjustments */
+    .slide-image {
+        justify-content: center;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .slide-image img {
+        height: 40vh;
+        /* Smaller image on mobile */
+    }
+
+    /* Skills Container */
+    .skills-container {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .skill-category {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* Project Showcase */
+    .slide-showcase {
+        height: 250px;
+        /* Fixed height for mobile project images */
+        background-size: cover;
+    }
+
+    .tags-row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .badget {
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        width: fit-content;
+    }
+
+    /* Timeline */
+    .timeline-h {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .t-item {
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .line-connector {
+        display: none;
+        /* Hide connector lines on mobile */
+    }
+
+    /* Contact */
+    .contact-big {
+        margin-top: 2rem;
+    }
+
+    .c-item {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .c-item i {
+        font-size: 2rem;
+    }
+
+    /* Controls */
+    .controls {
+        bottom: 20px;
+        padding: 8px 20px;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .nav-btn {
+        padding: 10px;
+    }
 }
