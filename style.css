@@ -458,15 +458,35 @@ body {
 @media screen and (max-width: 768px) {
 
     /* Layout Adjustments */
+    .slide {
+        display: block;
+        /* Disable flex centering on mobile to allow scroll */
+        overflow-y: auto;
+        padding-bottom: 120px;
+        /* Space for nav + extra */
+        padding-top: 2rem;
+        align-items: flex-start;
+        /* Ensure content starts at top */
+    }
+
+    .slide-content.centered {
+        /* Ensure centered content allows width expansion */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
     .slide-grid {
         display: flex;
         flex-direction: column;
         grid-template-columns: 1fr;
         width: 95%;
         gap: 2rem;
-        overflow-y: auto;
-        padding-top: 4rem;
-        /* Space for top breathing room */
+        /* overflow-y removed from here, handled by .slide */
+        margin: 0 auto;
+        height: auto;
+        /* Allow full content height */
+        padding-bottom: 2rem;
     }
 
     /* Reverse order for Profile slide so image is on top */
@@ -481,6 +501,15 @@ body {
 
     .role-title {
         font-size: 1.8rem;
+    }
+
+    /* Fix for linked slides (Slide 5, 6, 7) scrolling */
+    .slide-link-wrapper {
+        display: block;
+        height: auto;
+        min-height: 100%;
+        padding-top: 2rem;
+        /* Match slide padding */
     }
 
     .pre-title {
@@ -529,9 +558,17 @@ body {
 
     /* Project Showcase */
     .slide-showcase {
-        height: 250px;
-        /* Fixed height for mobile project images */
+        height: 50vh;
+        /* Much taller for "poster" look */
         background-size: cover;
+        /* Fill the space */
+        background-repeat: no-repeat;
+        background-position: top center;
+        /* Focus on top of image */
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        flex-shrink: 0;
+        /* Prevent shrinking */
     }
 
     .tags-row {
@@ -566,17 +603,30 @@ body {
     /* Contact */
     .contact-big {
         margin-top: 2rem;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .c-item {
-        font-size: 1.2rem;
-        padding: 1.5rem;
+        font-size: 1rem;
+        /* Smaller base font */
+        padding: 1rem;
+        /* Less padding */
         width: 100%;
         justify-content: center;
+        gap: 10px;
+        /* Reduce gap to keep icon close but distinct */
+    }
+
+    .c-item span {
+        font-size: 0.8rem;
+        /* Smaller to prevent break */
+        white-space: nowrap;
+        /* Force single line if possible */
     }
 
     .c-item i {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     /* Controls */
